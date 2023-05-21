@@ -6,6 +6,8 @@ import { ProductpageComponent } from './pages/productpage/productpage.component'
 import { LayoutDashboardComponent } from './layout/layout-dashboard/layout-dashboard.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
+import { ProductManagePageComponent } from './pages/product-manage-page/product-manage-page.component';
+import { PostDetailComponent } from './pages/post-detail/post-detail.component';
 
 const routes: Routes = [
   {
@@ -13,7 +15,8 @@ const routes: Routes = [
     component: LayoutComponent,
     children: [
       { path: '', component: HomepageComponent },
-      { path: 'product/', component: ProductpageComponent },
+      { path: 'product', component: ProductpageComponent },
+      { path: 'post-detail/:id', component: PostDetailComponent },
     ],
   },
   {
@@ -22,6 +25,10 @@ const routes: Routes = [
     children: [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
       { path: 'dashboard', component: DashboardComponent },
+      {
+        path: 'product',
+        component: ProductManagePageComponent,
+      },
     ],
   },
   { path: '**', component: NotFoundPageComponent },

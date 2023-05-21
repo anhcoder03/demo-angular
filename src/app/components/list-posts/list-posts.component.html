@@ -1,0 +1,12 @@
+<div>
+  <div class="grid grid-cols-4 gap-4">
+    <div *ngFor="let post of posts">
+      <div class="bg-gray-200">
+        <a [routerLink]="['post-detail', post.id]" class="text-purple-400">{{
+          post.title
+        }}</a>
+        <p>{{ post.body }}</p>
+      </div>
+    </div>
+  </div>
+</div>

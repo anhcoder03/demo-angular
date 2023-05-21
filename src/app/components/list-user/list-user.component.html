@@ -1,0 +1,11 @@
+<div class="mt-10">
+  <h1 class="text-2xl font-bold">List user</h1>
+  <div class="grid grid-cols-4 gap-5">
+    <div *ngFor="let user of users">
+      <div class="bg-blue-300">
+        <h1>{{ user.name }}</h1>
+        <p>{{ user.email }}</p>
+      </div>
+    </div>
+  </div>
+</div>
