@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +16,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ListPostsComponent } from './components/list-posts/list-posts.component';
 import { ListUserComponent } from './components/list-user/list-user.component';
 import { PostDetailComponent } from './pages/post-detail/post-detail.component';
+import { CarouselHolderComponentComponent } from './components/carousel-holder-component/carousel-holder-component.component';
 
 @NgModule({
   declarations: [
@@ -31,8 +33,9 @@ import { PostDetailComponent } from './pages/post-detail/post-detail.component';
     ListPostsComponent,
     ListUserComponent,
     PostDetailComponent,
+    CarouselHolderComponentComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, CarouselModule],
   providers: [],
   bootstrap: [AppComponent],
 })
