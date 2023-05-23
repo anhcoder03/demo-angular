@@ -1,5 +1,6 @@
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { Component } from '@angular/core';
+import { MovieService } from 'src/app/services/movie.service';
 
 @Component({
   selector: 'app-carousel-holder-component',
@@ -7,16 +8,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./carousel-holder-component.component.css'],
 })
 export class CarouselHolderComponentComponent {
+  data: any;
+  movies: any;
+  constructor(private movieService: MovieService) {}
+  ngOnInit() {
+    this.movieService.getDataUpComing().subscribe((data) => {
+      this.data = data;
+      this.movies = this.data.results;
+    });
+  }
   customOptions: OwlOptions = {
     loop: true,
     autoplay: true,
     dots: true,
-    autoHeight: true,
-    navSpeed: 700,
-    navText: [
-      '<i class="fa fa-angle-left"><</i>',
-      '<i class="fa fa-angle-right">></i>',
-    ],
+    navText: ['<', '>'],
     nav: true,
     responsive: {
       0: {

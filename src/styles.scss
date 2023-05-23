@@ -4,6 +4,12 @@
 @tailwind utilities;
 @import "ngx-owl-carousel-o/lib/styles/scss/owl.carousel";
 @import "ngx-owl-carousel-o/lib/styles/scss/owl.theme.default";
+
+body {
+  font-size: 16px;
+  color: #fff;
+}
+
 .container {
   max-width: 1280px;
   width: 100%;
@@ -26,4 +32,14 @@
 
 .owl-next {
   right: 10px;
+}
+
+.owl-dots {
+  position: absolute;
+  left: 50%;
+  top: calc(100% - 50px);
+  transform: translateX(-50%);
+}
+.owl-dot.ng-star-inserted.active span {
+  background: #000 !important;
 }

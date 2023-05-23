@@ -1,30 +1,15 @@
 <owl-carousel-o
   #carousel
   [options]="customOptions"
-  class="grid w-full grid-cols-1 h-[500px] mb-10"
+  class="grid w-full grid-cols-1 h-[600px] mb-10"
 >
-  <ng-template carouselSlide class="w-full h-[500px]"
+  <ng-template
+    carouselSlide
+    *ngFor="let movie of movies"
+    class="w-full h-[600px]"
     ><img
-      src="https://images.unsplash.com/photo-1684749841085-f144067c42ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60"
+      [src]="'https://image.tmdb.org/t/p/original/' + movie.backdrop_path"
       alt=""
-      class="w-full h-[500px] object-cover"
-  /></ng-template>
-  <ng-template carouselSlide class="w-full h-[500px]"
-    ><img
-      src="https://images.unsplash.com/photo-1684749841085-f144067c42ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60"
-      alt=""
-      class="w-full h-[500px] object-cover"
-  /></ng-template>
-  <ng-template carouselSlide class="w-full h-[500px]"
-    ><img
-      src="https://images.unsplash.com/photo-1684749841085-f144067c42ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60"
-      alt=""
-      class="w-full h-[500px] object-cover"
-  /></ng-template>
-  <ng-template carouselSlide class="w-full h-[500px]"
-    ><img
-      src="https://images.unsplash.com/photo-1684749841085-f144067c42ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60"
-      alt=""
-      class="w-full h-[500px]"
+      class="w-full h-[600px] object-cover"
   /></ng-template>
 </owl-carousel-o>

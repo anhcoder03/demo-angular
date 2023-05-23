@@ -1,16 +1,21 @@
-<div class="p-3 bg-slate-400">
-  <div class="container">
+<div class="bg-gray12">
+  <div class="container p-4">
     <div class="flex items-center justify-between">
       <div>
-        <img
-          src="https://angular.io/assets/images/logos/angular/logo-nav@2x.png"
-          alt=""
-        />
+        <a routerLink="">
+          <img
+            src="https://ntsnminh258.github.io/phimchill/assets/img/logo.png"
+            alt=""
+          />
+        </a>
       </div>
-      <div class="flex items-center gap-x-5">
-        <a routerLink="/">Home</a>
-        <a routerLink="/product">Product</a>
-        <a routerLink="/admin">Dashboarh</a>
+      <div class="flex items-center gap-x-[100px]">
+        <div class="flex items-center gap-x-4">
+          <div *ngFor="let itemMenu of listMenu">
+            <a routerLink="{{ itemMenu.path }}">{{ itemMenu.title }}</a>
+          </div>
+        </div>
+        <app-search></app-search>
       </div>
     </div>
   </div>

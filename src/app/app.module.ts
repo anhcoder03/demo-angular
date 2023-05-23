@@ -17,6 +17,8 @@ import { ListPostsComponent } from './components/list-posts/list-posts.component
 import { ListUserComponent } from './components/list-user/list-user.component';
 import { PostDetailComponent } from './pages/post-detail/post-detail.component';
 import { CarouselHolderComponentComponent } from './components/carousel-holder-component/carousel-holder-component.component';
+import { SearchComponent } from './components/search/search.component';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -34,8 +36,15 @@ import { CarouselHolderComponentComponent } from './components/carousel-holder-c
     ListUserComponent,
     PostDetailComponent,
     CarouselHolderComponentComponent,
+    SearchComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, CarouselModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    CarouselModule,
+    NoopAnimationsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
