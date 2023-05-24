@@ -8,6 +8,7 @@ import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.com
 import { ProductManagePageComponent } from './pages/product-manage-page/product-manage-page.component';
 import { PostDetailComponent } from './pages/post-detail/post-detail.component';
 import { TvPageComponent } from './pages/tv-page/tv-page.component';
+import { MovieDetailComponent } from './pages/movie-detail/movie-detail.component';
 
 const routes: Routes = [
   {
@@ -16,7 +17,7 @@ const routes: Routes = [
     children: [
       { path: '', component: HomepageComponent },
       { path: 'tvseries', component: TvPageComponent },
-      { path: 'post-detail/:id', component: PostDetailComponent },
+      { path: 'movie/:id', component: MovieDetailComponent },
     ],
   },
   {

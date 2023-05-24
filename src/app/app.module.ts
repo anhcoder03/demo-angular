@@ -22,6 +22,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { TvPageComponent } from './pages/tv-page/tv-page.component';
 import { PopularMovieComponent } from './components/movies/popular-movie/popular-movie.component';
 import { TopRatedMovieComponent } from './components/movies/top-rated-movie/top-rated-movie.component';
+import { MovieDetailComponent } from './pages/movie-detail/movie-detail.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { TopRatedMovieComponent } from './components/movies/top-rated-movie/top-
     TvPageComponent,
     PopularMovieComponent,
     TopRatedMovieComponent,
+    MovieDetailComponent,
   ],
   imports: [
     BrowserModule,

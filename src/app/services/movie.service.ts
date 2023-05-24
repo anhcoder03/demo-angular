@@ -15,11 +15,17 @@ export class MovieService {
       'https://api.themoviedb.org/3/movie/popular?api_key=95f2419536f533cdaa1dadf83c606027'
     );
   }
-  getMovieDetail() {
+  getDataTopRatedMovie() {
     return this.http.get(
-      'https://api.themoviedb.org/3/movie/122?api_key=95f2419536f533cdaa1dadf83c606027'
+      'https://api.themoviedb.org/3/movie/top_rated?api_key=95f2419536f533cdaa1dadf83c606027'
     );
   }
+  getMovieDetail(movieId: any) {
+    return this.http.get(
+      `https://api.themoviedb.org/3/movie/${movieId}?api_key=95f2419536f533cdaa1dadf83c606027`
+    );
+  }
+
   getCelebs() {
     return this.http.get(
       'https://api.themoviedb.org/3/person/popular?api_key=95f2419536f533cdaa1dadf83c606027'

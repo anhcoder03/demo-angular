@@ -43,7 +43,7 @@
               <button
                 class="flex w-full items-center justify-center rounded-[10px] bg-secondary py-2 font-medium outline-none transition-all hover:bg-red-400"
               >
-                Watch Now
+                <a [routerLink]="['movie', movie.id]">Watch Now</a>
                 <svg
                   stroke="currentColor"
                   fill="currentColor"
@@ -61,13 +61,6 @@
               </button>
             </div>
           </div>
-
-          <!--  -->
-          <!-- <img
-            [src]="'https://image.tmdb.org/t/p/original/' + movie.backdrop_path"
-            alt=""
-            class="w-full h-[600px] object-cover"
-        /> -->
         </ng-template>
       </owl-carousel-o>
     </div>
