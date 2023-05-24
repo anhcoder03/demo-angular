@@ -1,7 +1,18 @@
+<style>
+  .owl-dots {
+    position: absolute !important;
+    left: 50% !important;
+    top: calc(100% - 50px) !important;
+    transform: translateX(-50%) !important;
+  }
+  .owl-dot.ng-star-inserted.active span {
+    background: #000 !important;
+  }
+</style>
 <owl-carousel-o
   #carousel
   [options]="customOptions"
-  class="grid w-full grid-cols-1 h-[600px] mb-10"
+  class="grid w-full grid-cols-1 h-[600px]"
 >
   <ng-template
     carouselSlide

@@ -25,7 +25,10 @@ body {
   background-color: rgba(0, 0, 0, 0.5) !important;
   padding: 10px !important;
 }
-
+.owl-next:hover,
+.owl-prev:hover {
+  background: #ffb35c !important;
+}
 .owl-prev {
   left: 10px;
 }
@@ -34,12 +37,9 @@ body {
   right: 10px;
 }
 
-.owl-dots {
-  position: absolute;
-  left: 50%;
-  top: calc(100% - 50px);
-  transform: translateX(-50%);
-}
 .owl-dot.ng-star-inserted.active span {
-  background: #000 !important;
+  background: #ff8a00 !important;
+}
+.link-active {
+  color: #ff8a00;
 }

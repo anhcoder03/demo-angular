@@ -12,7 +12,9 @@
       <div class="flex items-center gap-x-[100px]">
         <div class="flex items-center gap-x-4">
           <div *ngFor="let itemMenu of listMenu">
-            <a routerLink="{{ itemMenu.path }}">{{ itemMenu.title }}</a>
+            <div routerLinkActive="link-active">
+              <a routerLink="{{ itemMenu.path }}">{{ itemMenu.title }}</a>
+            </div>
           </div>
         </div>
         <app-search></app-search>

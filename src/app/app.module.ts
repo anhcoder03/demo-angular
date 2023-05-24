@@ -19,6 +19,9 @@ import { PostDetailComponent } from './pages/post-detail/post-detail.component';
 import { CarouselHolderComponentComponent } from './components/carousel-holder-component/carousel-holder-component.component';
 import { SearchComponent } from './components/search/search.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { TvPageComponent } from './pages/tv-page/tv-page.component';
+import { PopularMovieComponent } from './components/movies/popular-movie/popular-movie.component';
+import { TopRatedMovieComponent } from './components/movies/top-rated-movie/top-rated-movie.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +40,9 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
     PostDetailComponent,
     CarouselHolderComponentComponent,
     SearchComponent,
+    TvPageComponent,
+    PopularMovieComponent,
+    TopRatedMovieComponent,
   ],
   imports: [
     BrowserModule,

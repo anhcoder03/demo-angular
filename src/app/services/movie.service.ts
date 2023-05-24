@@ -7,6 +7,11 @@ export class MovieService {
   constructor(private http: HttpClient) {}
   getDataUpComing() {
     return this.http.get(
+      'https://api.themoviedb.org/3/movie/upcoming?api_key=95f2419536f533cdaa1dadf83c606027'
+    );
+  }
+  getDataPopularMovie() {
+    return this.http.get(
       'https://api.themoviedb.org/3/movie/popular?api_key=95f2419536f533cdaa1dadf83c606027'
     );
   }
